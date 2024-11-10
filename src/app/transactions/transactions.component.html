@@ -1,0 +1,32 @@
+<div class="container mt-2">
+    <div style="display: flex;">
+    <h3 >Last Transactions</h3>
+    <h3 class="text-secondary" style="margin-left: 100px;">See All</h3>
+    </div>
+
+
+  
+    <table>
+        <thead>
+            <tr>
+                <th>User Icon</th>
+                <th>User Name</th>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Type</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of transactions">
+                 <td style="width: 100px;"><img [src]="user.userimage" style="width: 50px;border-radius: 50%;" ></td>
+                 
+                 <td style="margin: 100px;width: 100px;">{{user.username}}</td>
+                 <td style="margin: 100px;width: 100px;">{{user.date}}</td>
+                 <td style="margin: 100px;width: 100px;" style="color:greenyellow">{{user.amount}}</td>
+                 <td style="margin: 100px;width: 10px;">{{user.type}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+</div>
